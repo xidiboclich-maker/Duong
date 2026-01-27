@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Thu Thập Thông Tin Bệnh Nhân</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    body { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      background-color: rgba(204, 209, 255, 0.589); 
+      margin: 0; 
+      padding: 25px;
+    }
+
+    .ThongTinBenhNhan { 
+      max-width: 700px;
+      background: White; 
+      margin: auto; 
+      padding: 10px; 
+      border-radius: 25px; 
+      border: 10px dodgerblue
+    }
+    
+    h2 { 
+      text-align: center; 
+      color: dodgerblue
+    }
+
+    .titles { 
+      background: dodgerblue; 
+      color: white; 
+      padding: 10px; 
+      margin-top: 20px; 
+      border-radius: 10px; 
+      font-weight: bold; 
+    }
+    
+    .row { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 75px; 
+      margin-top: 10px
+    }
+
+    .row2 { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 40px; 
+      margin-top: 10px
+    }
+
+    .row3 { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 15px; 
+      margin-top: 10px
+    }
+    
+    .col { 
+      display: flex; 
+      flex-direction: column;
+    }
+    
+    label { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif'; 
+      font-size: 15px; 
+      font-weight: 600;
+    }
+    
+    input, textarea, select { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 10px; 
+      border: 1px solid dodgerblue; 
+      border-radius: 5px; 
+      font-size: 14px; }
+    
+    button { 
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: dodgerblue;
+      color: white;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid dodgerblue;
+      border-radius: 5px;
+      box-shadow: 2px 2px hsl(237, 82%, 79%);
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="ThongTinBenhNhan">
+    <h2>PHIẾU THU THẬP THÔNG TIN BỆNH NHÂN</h2>
+    
+    <div class="titles">1.Thông tin bệnh nhân</div>
+    <div class="row">
+      <div class="col">
+        <label>Mã bệnh nhân:</label>
+        <input type="text">
+      </div>
+      <div class="col">
+        <label>Họ và tên:</label>
+        <input type="text">
+      </div>
+      <div class="col">
+        <label>Ngày tháng năm sinh:</label>
+        <input type="date" max="2026-01-01">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col">
+        <label>CMND</label>
+        <input type="text">
+      </div>
+      <div class="col">
+        <label>Nghề nghiệp</label>
+        <input type="text">
+      </div>
+      <div class="col">
+        <label>Số điện thoại</label>
+        <input type="tel">
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col" style="flex: 2">
+        <label>Địa chỉ</label>
+        <input type="text">
+      </div>
+      <div class="col">
+        <label>Mã BHYT</label>
+        <input type="tel">
+      </div>
+    </div>
+
+    <div class="titles">2. Tình trạng ban đầu:</div>
+    <div class="row">
+      <div class="col">
+        <label>Chiều cao</label>
+        <input type="text" placeholder="cm">
+      </div>
+      <div class="col">
+        <label>Cân nặng</label>
+        <input type="number" placeholder="Kg">
+      </div>
+      <div class="col">
+        <label>Huyết áp</label>
+        <input type="number" placeholder="mmHg">
+      </div>
+    </div>
+
+    <div class="row2">
+      <div class="col">
+        <label>SPO2 </label>
+        <input type="number" placeholder="%">
+      </div>
+      <div class="col">
+        <label>Khả năng di chuyển: tự đi được, không tự đi được, dùng xe lăn,...</label>
+        <input type="text">
+      </div>
+    </div>
+
+    <div class="titles">3. Chẩn đoán ban đầu: </div>
+    <div class="row">
+      <div class="col">
+        <label>Mã chẩn đoán </label>
+        <input type="text">
+      </div>
+      <div class="col">
+        <label>Nội dung chẩn đoán</label>
+        <textarea rows="5" cols="60"></textarea>
+      </div>
+    </div>
+    
+    <div class="titles">4. Đặt hẹn: </div>
+    <div class="row3" gap="20px">
+      <div class="col">
+        <label>Ngày:</label>
+        <input type="date" min="2026-02-01">
+      </div>
+      <div class="col">
+        <label>Buổi khám:</label>
+        <select>
+          <option>Sáng</option>
+          <option>Trưa</option>
+          <option>Chiều</option>
+          <option>Tối</option>
+        </select>
+      </div>
+      <div class="col">
+        <label>Tên bác sĩ + chuyên khoa:</label>
+        <select>
+          <option>1. TS.BS Nguyễn Anh Dũng	(Quản lý Y tế / Ngoại khoa)</option>
+          <option>2. CKII Trần Đặng Khuê Anh	(Nội tổng quát)</option>
+          <option>3. TS.BS Võ Hồng Khôi	(Nội thần kinh)</option>
+          <option>4. BS.CKII Nguyễn Đỗ Anh	(Tim mạch can thiệp)</option>
+          <option>5. BS.CKII Võ Văn Nhựt Nam	Ngoại tiêu hóa</option>
+          <option>6. BS.CKII Mai Phan Tường Anh	(Ngoại chấn thương chỉnh hình)</option>
+          <option>7. TS.BS Bùi Chí Thương	(Sản phụ khoa)</option>
+          <option>8. BS.CKII Vương Thị Ngọc Lan	(Hiếm muộn / Sản khoa)</option>
+          <option>9. BS.CKII Nguyễn Thị Thu Hà	(Nội tiết - Thận)</option>
+          <option>10. BS.CKII Huỳnh Văn Ân	(Hồi sức tích cực - Chống độc)</option>
+          <option>11. BS.CKII Nguyễn Thanh Sử	(Cấp cứu)</option>
+          <option>12. TS.BS Trần Ngọc Sĩ	(Ngoại Thần kinh)</option>
+          <option>13. BS.CKII Phạm Thị Ngọc Quyên	(Nội Thần kinh)</option>
+          <option>14. BS.CKII Nguyễn Ngọc Duy	(Tai Mũi Họng)</option>
+          <option>15. BS.CKII Nguyễn Văn Tuấn	(Phẫu thuật Gây mê hồi sức)</option>
+          <option>16. BS.CKII Đỗ Văn Nam	(Nội hô hấp)</option>
+          <option>17. BS.CKII Lê Thị Đẹp	(Nội tim mạch)</option>
+          <option>18. BS.CKI Nguyễn Thị Thúy Hằng	(Mắt (Nhãn khoa))</option>
+          <option>19. BS.CKII Trần Thị Anh Tường	(Dinh dưỡng) </option>
+          <option>20. BS.CKII Nguyễn Kiều Nhi	(Khám bệnh)</option>
+        </select>
+      </div>
+      <div class="col">
+        <label>Lý do khám:</label>
+        <textarea rows="5" cols="100"></textarea>
+      </div>
+      
+      <form action="/action_page.php">
+        <button type="submit">Đặt Lịch</button>
+        <button type="edit">Sửa</button>
+        <button type="close">Đóng</button>
+        <button type="print">In phiếu đăng kí khám</button>
+      </form>
+    
+    </div>
+  </div>
+</body>
