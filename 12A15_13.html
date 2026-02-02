@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Thu Thập Thông Tin Bệnh Nhân</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: darkred;
+      }
+
+      .ThongTinBenhNhan {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 700px;
+        margin: auto;
+      }
+
+      h2 {
+        text-align: center;
+        color: red;
+      }
+
+      fieldset {
+        border: 2px solid darkred;
+        padding: 10px;
+        margin-top: 10px;
+      }
+
+      .titles {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: darkred;
+      }
+
+      .col {
+        display: flex;
+        flex-direction: column;
+      }
+
+      button {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+  <form action="/action_page.php">
+  <div class="ThongTinBenhNhan">
+    <h2>PHIẾU THU THẬP THÔNG TIN BỆNH NHÂN</h2>
+    
+    <fieldset>
+    <legend class="titles">1. Thông tin bệnh nhân</legend>
+    <div class="row">
+      <div class="col">
+        <label>Mã bệnh nhân:</label>
+        <input type="text" required>
+      </div>
+      <div class="col">
+        <label>Họ và tên:</label>
+        <input type="text" required>
+      </div>
+      <div class="col">
+        <label>Ngày tháng năm sinh:</label>
+        <input type="date" max="2026-01-01" required>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col">
+        <label>CMND:</label>
+        <input type="text" required>
+      </div>
+      <div class="col">
+        <label>Nghề nghiệp:</label>
+        <input type="text" required>
+      </div>
+      <div class="col">
+        <label>Số điện thoại:</label>
+        <input type="tel" required>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col" style="flex: 1">
+        <label>Địa chỉ:</label>
+        <input type="text" required>
+      </div>
+      <div class="col">
+        <label>Mã BHYT:</label>
+        <input type="tel" required>
+      </div>
+    </div>
+    </fieldset>
+
+    <fieldset>
+    <legend class="titles">2. Tình trạng ban đầu:</legend>
+    <div class="row">
+      <div class="col">
+        <label>Chiều cao:</label>
+        <input type="text" placeholder="cm" required>
+      </div>
+      <div class="col">
+        <label>Cân nặng:</label>
+        <input type="number" placeholder="Kg" required>
+      </div>
+      <div class="col">
+        <label>Huyết áp:</label>
+        <input type="number" placeholder="mmHg" required>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <label>SPO2 </label>
+        <input type="number" placeholder="%" required>
+      </div>
+      <div class="col2">
+        <label>Khả năng di chuyển:</label><br>
+        <input type="radio" id="tudiduoc" name="khanangdichuyen" value="Tự đi được" required>
+        <label for="tudiduoc">tự đi được</label><br>
+        <input type="radio" id="khongtudiduoc" name="khanangdichuyen" value="Không tự đi được" required>
+        <label for="khongtudiduoc">không tự đi được</label><br>
+        <input type="radio" id="dungxelan" name="khanangdichuyen" value="Dùng xe lăn" required>
+        <label for="dungxelan">dùng xe lăn</label>
+      </div>
+    </div>
+    </fieldset>
+
+    <fieldset>
+    <legend class="titles">3. Chẩn đoán ban đầu: </legend>
+    <div class="row">
+      <div class="col">
+        <label>Mã chẩn đoán </label>
+        <input type="text" required>
+      </div>
+      <div class="col">
+        <label>Nội dung chẩn đoán</label>
+        <textarea rows="5" cols="60" required></textarea>
+      </div>
+    </div>
+    </fieldset>
+    
+    <fieldset>
+    <legend class="titles">4. Đặt hẹn: </legend>
+    <div class="row" gap="20px">
+      <div class="col">
+        <label>Ngày:</label>
+        <input type="date" min="2026-02-01" required>
+      </div>
+      <div class="col">
+        <label>Buổi khám:</label>
+        <select required>
+          <option>Sáng</option>
+          <option>Trưa</option>
+          <option>Chiều</option>
+          <option>Tối</option>
+        </select>
+      </div>
+
+      <div class="col">
+        <label>Chuyên khoa:</label>
+        <select required>
+          <option>--Chọn chuyên khoa--</option>
+          <option>1. Quản lý Y tế / Ngoại khoa</option>
+          <option>2. Nội tổng quát</option>
+          <option>3. Nội thần kinh</option>
+          <option>4. Tim mạch can thiệp</option>
+          <option>5. Ngoại tiêu hóa</option>
+          <option>6. Ngoại chấn thương chỉnh hình</option>
+          <option>7. Sản phụ khoa</option>
+          <option>8. Hiếm muộn / Sản khoa</option>
+          <option>9. Nội tiết - Thận</option>
+          <option>10. Hồi sức tích cực - Chống độc</option>
+          <option>11. Cấp cứu</option>
+          <option>12. Ngoại Thần kinh</option>
+          <option>13. Nội Thần kinh</option>
+          <option>14. Tai Mũi Họng</option>
+          <option>15. Phẫu thuật</option>
+          <option>16. Nội hô hấp</option>
+          <option>17. Nội tim mạch</option>
+          <option>18. Mắt (Nhãn khoa)</option>
+          <option>19. Dinh dưỡng</option> 
+          <option>20. Khám bệnh</option>
+        </select>
+      </div>
+      <div class="col">
+        <label>Tên bác sĩ:</label>
+        <select required>
+          <option>--Chọn bác sĩ--</option>
+          <option>1. TS.BS Nguyễn Anh Dũng	</option>
+          <option>2. CKII Trần Đặng Khuê Anh	</option>
+          <option>3. TS.BS Võ Hồng Khôi	</option>
+          <option>4. BS.CKII Nguyễn Đỗ Anh	</option>
+          <option>5. BS.CKII Võ Văn Nhựt Nam	</option>
+          <option>6. BS.CKII Mai Phan Tường Anh	</option>
+          <option>7. TS.BS Bùi Chí Thương	</option>
+          <option>8. BS.CKII Vương Thị Ngọc Lan	</option>
+          <option>9. BS.CKII Nguyễn Thị Thu Hà	</option>
+          <option>10. BS.CKII Huỳnh Văn Ân	</option>
+          <option>11. BS.CKII Nguyễn Thanh Sử	</option>
+          <option>12. TS.BS Trần Ngọc Sĩ	</option>
+          <option>13. BS.CKII Phạm Thị Ngọc Quyên	</option>
+          <option>14. BS.CKII Nguyễn Ngọc Duy	</option>
+          <option>15. BS.CKII Nguyễn Văn Tuấn	</option>
+          <option>16. BS.CKII Đỗ Văn Nam	</option>
+          <option>17. BS.CKII Lê Thị Đẹp	</option>
+          <option>18. BS.CKI Nguyễn Thị Thúy Hằng	</option>
+          <option>19. BS.CKII Trần Thị Anh Tường	</option>
+          <option>20. BS.CKII Nguyễn Kiều Nhi	</option>
+        </select>
+      </div>
+      <div class="col">
+        <label>Lý do khám:</label>
+        <textarea rows="5" cols="75" required></textarea>
+      </div>
+      </fieldset>
+
+        <button type="submit">Đặt Lịch</button>
+        <button type="edit">Sửa</button>
+        <button type="close">Đóng</button>
+        <button type="print">In phiếu đăng kí khám</button>
+      </form>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,125 @@
+body { 
+      background-color: lightblue; 
+      margin: 25px;
+      background-image: linear-gradient(to bottom right, blueviolet, lightblue);
+    }
+
+    .ThongTinBenhNhan { 
+      max-width: 675px;
+      background: White; 
+      margin: auto; 
+      padding: 25px; 
+      border-radius: 25px; 
+    }
+
+    h1 { 
+      font-family: 'Segoe UI', sans-serif; 
+      text-align: center; 
+      color: dodgerblue
+    }
+
+    .titles {
+      font-family: 'Segoe UI', sans-serif; 
+      text-align: center;
+      background: dodgerblue; 
+      color: white; 
+      padding: 5px; 
+      margin-top: 20px; 
+      border-radius: 10px; 
+      font-weight: bold; 
+    }
+    
+    .row { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 81px; 
+      margin-top: 10px
+    }
+
+    .row2 { 
+      display: flex; 
+      flex-wrap: wrap; 
+      gap: 62.5px; 
+      margin-top: 10px
+    }
+
+    .row3 { 
+      display: flex; 
+      flex: 1;
+      flex-wrap: wrap; 
+      gap: 10px; 
+      margin-top: 10px
+    }
+    
+    .col { 
+      display: flex; 
+      flex-direction: column;
+      min-width: 100px;
+    }
+    
+    label { 
+      font-family: 'Segoe UI', sans-serif; 
+      color: blueviolet;
+      font-size: 15px; 
+      font-weight: 600;
+    }
+    
+    input, textarea, select { 
+      font-family: 'Segoe UI', sans-serif;
+      padding: 5px; 
+      border: 1px solid dodgerblue; 
+      border-radius: 5px; 
+      font-size: 14px; 
+      font-weight: 400;
+      width: 100%; 
+      box-sizing: border-box;
+    }
+
+    .buttongroup {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    
+    .buttongroup button { 
+      cursor: pointer;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: dodgerblue;
+      color: white;
+      min-width: 125px;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid dodgerblue;
+      border-radius: 5px;
+      box-shadow: 2px 2px hsl(237, 82%, 79%);
+    }
+
+    p.TenBenhVien {
+      margin-top: 20px;
+      line-height: 0.5;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    p.DiaChi {
+      text-align: center;
+      line-height: 0.5;
+      font-family: 'Segoe UI', sans-serif;
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      font-weight: 600;
+    }
+    
+    p.Hotline {
+      text-align: center;
+      line-height: 0.5;
+      font-family: 'Segoe UI', sans-serif;
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+      font-weight: 600;
+    }
